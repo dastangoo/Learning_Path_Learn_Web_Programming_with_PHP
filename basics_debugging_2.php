@@ -12,6 +12,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL | E_STRICT);
 // 3. use var_dump($counter)
 var_dump($counter);
+
 // 4. wrong data type
 $counter = ' ';
 
