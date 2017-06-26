@@ -1,11 +1,11 @@
 <?php
 // Managing the Code -- External Libraries
 
-// ini_set('display_errors', 0);
-include './includes/constants.php.wrong';
-require './includes/Library.php.wrong';
-//require './includes/Library.php';
-//include './includes/constants.php';
+ini_set('display_errors', 0);
+// include './includes/constants.php.wrong';
+// require './includes/Library.php.wrong';
+require './includes/Library.php';
+include './includes/constants.php';
 
 // build the website
 $title = titleTag(SITE_HEADER);
@@ -15,8 +15,8 @@ $body[] = '<div style="width: 635px; height: 650px;">';
 $body[] = '<h1>' . CONTENT_HEADER . '</h1>';
 $body[] = '<hr />';
 $body[] = '<div style="width: 110px; height: 600px; float: left;">';
-$body[] = include './includes/ad_block.php.wrong';
-$body[] = include './includes/ad_block.php.wrong';
+$body[] = include './includes/ad_block.html';
+$body[] = include './includes/ad_block.html';
 $body[] = '</div>';
 $body[] = '<div style="border: solid blue 1px; width: 500px; height: 410px; float: left; font: 12px arial,sans-serif; padding: 5px;"';
 $body[] = '<h3>' . CONTENT_HEADER . '</h3>';
