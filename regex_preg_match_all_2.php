@@ -6,7 +6,7 @@
 // using () allows us to create a sub-pattern or sub-group
 
 $pattern = '/<a .*?href=(".*?")>/i';
-$string = file_get_contents('http://sharif.edu/~asadi/');
+$string = file_get_contents('http://www.unlikelysource.com/smiling_jack/');
 
 preg_match_all($pattern, $string, $matches);
 echo '<b>preg_match_all()</b>';
