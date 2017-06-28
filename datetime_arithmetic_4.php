@@ -31,7 +31,7 @@ $userDate = new DateTime(sprintf('%4d %3s %4d', $day, $month, $year));
 $curDate = $userDate->format('l, d F Y');
 
 // buidl future date +6 weeks from now
-$interval = new DateInverval('p6W');
+$interval = new DateInterval('p6W');
 $userDate->add($interval);
 $newDate = $userDate->format('l, d F Y');
 ?>
@@ -43,28 +43,33 @@ $newDate = $userDate->format('l, d F Y');
 </head>
 
 <body>
-<form>
-  <table width=60%>
-    <tr>
-      <th>Year</th><td><input type="text" name="year" size="4" maxlength="4" /></td>
-      <th>Month</th>
-      <td>
-        <select name="month">
-          <option>Jan</option>
-          <option>Feb</option>
-          <option>Mar</option>
-          <option>Apr</option>
-          <option>May</option>
-          <option>Jun</option>
-          <option>Jul</option>
-          <option>Aug</option>
-          <option>Sep</option>
-          <option>Oct</option>
-          <option>Nov</option>
-          <option>Dec</option>
-        </select>
-      </td>
-    </tr>
-  </table>
-</form>
+  <form>
+    <table width=60%>
+      <tr>
+        <th>Year</th><td><input type="text" name="year" size=4 maxlength="4" /></td>
+        <th>month</th>
+          <td>
+            <select name="month">
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option>May</option>
+              <option>Jun</option>
+              <option>Jul</option>
+              <option>Aug</option>
+              <option>Sep</option>
+              <option>Oct</option>
+              <option>Nov</option>
+              <option>Dec</option>
+            </select>
+          </td>
+      <th>Day</th><td><input type="text" name="day" size=2 maxlength="2" /></td>
+      <td><input type="submit" /></td>
+    </table>
+  </form>
+  <p>
+    <b>RESULT: </b><?php $userDate->format('l, d M Y'); ?>
+  </p>
+
 </body>
