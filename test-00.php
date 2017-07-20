@@ -1,8 +1,12 @@
 <?php
-$clean_data = filter_input_array(INPUT_POST, array(
-  // each field in turn, with desired defintion
-  'name' => FILTER_SANITIZES_STRING,
-  'email' => FILTER_VALIDATE_EMAIL
-));
+$game[0] = 'paper';
+$game[1] = 'scissors';
+$game[2] = 'stone';
 
-var_dump($clean_data);
+//var_dump($game);
+
+$game1 = array(0 => 'stone', 1 => 'paper', 2 => 'scissors');
+//var_dump($game1);
+
+$game2 = [0 => 'scissors', 1 => 'stone', 2 => 'paper'];
+var_dump($game2);
